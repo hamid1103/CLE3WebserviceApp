@@ -29,6 +29,11 @@ function getDishes()
             "id" => 5,
             "name" => "Paella",
             "kitchen" => "Spanish",
+        ],
+        [
+            "id" => 6,
+            "name" => "Nasi",
+            "kitchen" => "Asian",
         ]
     ];
 }
