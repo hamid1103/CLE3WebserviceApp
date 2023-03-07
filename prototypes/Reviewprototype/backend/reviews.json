@@ -1,0 +1,44 @@
+{
+  "reviews": [
+    {
+      "id": 0,
+      "reviewer": "Stan",
+      "score": 3,
+      "summary": "Grappige locatie, maar de pannekoeken smaken oud",
+      "place": "Rotterdam",
+      "name": "De pannenkoekeboot"
+    },
+    {
+      "id": 1,
+      "reviewer": "Brom",
+      "score": 5,
+      "summary": "De frietjes zijn lekker maar hun saus smaakt oud en zuur.",
+      "place": "Breda",
+      "name": "Friet van bram"
+    },
+    {
+      "id": 2,
+      "reviewer": "Michelle",
+      "score": 8,
+      "summary": "Had mijn verjaardag hier, pannenkoeken zijn middelmatig maar ze konden makkelijk al onze gasten snel serveren.",
+      "place": "Rotterdam",
+      "name": "De pannenkoekeboot"
+    },
+    {
+      "id": 5,
+      "reviewer": "Drake",
+      "score": 3,
+      "summary": "Grappige locatie, maar de pannekoeken",
+      "place": "Rotterdam",
+      "name": "De pannenkoekeboot"
+    },
+    {
+      "id": 6,
+      "reviewer": "Loki",
+      "score": 7,
+      "summary": "De koffie is niet verkeerd hier, alleen zitten er soms kattenharen in.",
+      "place": "Tokyo",
+      "name": "Neko Neko Cafe"
+    }
+  ]
+}

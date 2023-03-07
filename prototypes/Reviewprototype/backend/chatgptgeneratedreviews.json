@@ -1,0 +1,28 @@
+{
+  "reviews": [
+    {
+      "score": 9.5,
+      "summary": "Delicious food and great atmosphere",
+      "place_name": "Los Angeles, CA",
+      "restaurant_name": "L.A. Grill"
+    },
+    {
+      "score": 7.8,
+      "summary": "Decent food, but service could be improved",
+      "place_name": "New York, NY",
+      "restaurant_name": "Big Apple Bistro"
+    },
+    {
+      "score": 8.9,
+      "summary": "Amazing desserts and friendly staff",
+      "place_name": "San Francisco, CA",
+      "restaurant_name": "Sweet Treats Cafe"
+    },
+    {
+      "score": 6.2,
+      "summary": "Poor quality food and slow service",
+      "place_name": "Houston, TX",
+      "restaurant_name": "Texas BBQ Joint"
+    }
+  ]
+}

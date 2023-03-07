@@ -1,0 +1,60 @@
+body{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+.container{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border: black 0.5em solid;
+    width: 75%;
+}
+
+.fullcontainer{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border: black 0.5em solid;
+    width: 100%;
+}
+
+.review-card{
+    max-width: 10em;
+}
+
+.formrule{
+    font-family: Calibri;
+    font-size: 1.3em;
+    margin-bottom: 3em;
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    position: relative;
+    left: 12.5%;
+}
+#story{
+    border: black 0.4em solid;
+    font-family: Calibri;
+    font-size: 1.3em;
+}
+
+.submitbutton{
+    margin-top: 10vh;
+    text-align: center;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.formrule input{
+    border: black 0.4em solid;
+    font-family: Calibri;
+    font-size: 1.3em;
+}
+
+.formrule #submitB{
+    background-color: orange;
+}
