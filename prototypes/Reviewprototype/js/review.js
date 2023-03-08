@@ -22,7 +22,7 @@ function init(){
 }
 
 function subimit(e){
-    reviewer = "John Doe"
+    reviewer = document.getElementById('name').value
     name = document.getElementById('restaurantName').value
     score = document.getElementById('score').value
     place = document.getElementById('location').value
