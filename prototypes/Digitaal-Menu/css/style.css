@@ -1,0 +1,20 @@
+body {
+    text-align: center;
+    margin: 0;
+    font-size: larger;
+}
+
+table {
+    margin: 0 auto;
+    border: #0d0d0d 3px solid;
+}
+
+td {
+    max-width: 30vw;
+    padding: 1vw;
+}
+
+button {
+    margin: 0 auto;
+    display: none;
+}
