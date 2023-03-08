@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prototype Reserveringsdienst</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="js/validaté.js" defer></script>
+</head>
+
+
+
+
+<body>
+
+<H1>Reservering plaatsen</H1>
+<nav></nav>
+
+<section>
+    <p>voor welke restaurant wil je reserveren</p>
+
+</section>
+
+<form action="telefoon.html" method="post">
+    <div class="f">
+        <label for="firstname">voornaam</label>
+        <input id="firstname" name="firstname" type="text"placeholder="voornaam" required>
+    </div>
+
+    <div class="restaurant">
+        <label for="restaurant">Kies een restaurant;</label>
+        <select name="restaurant" id="restaurant">
+            <option disabled selected>kies een optie</option>
+            <option value="Macdonalds">Macdonalds</option>
+            <option value="KFC">KFC</option>
+            <option value="Domino's">Domino's</option>
+            <option value="Burgerking">Burgerking</option>
+        </select>
+    </div>
+
+    <div class="datum-tijd">
+        <label for="datetime">Datum en tijd:</label>
+        <input type="datetime-local" id="datetime" name="datetime" required>
+    </div>
+
+    <div class="aantal-personen">
+        <label for="aantal-personen">Aantal personen:</label>
+        <input type="number" id="aantal-personen" name="aantal-personen" min="1" max="10" required>
+    </div>
+
+    <div class="opmerkingen">
+        <label for="opmerkingen">Opmerkingen:</label>
+        <textarea id="opmerkingen" name="opmerkingen" rows="5"></textarea>
+    </div>
+
+    <div>
+        <button type="submit" class="button">Reserveren</button>
+    </div>
+</form>
+
+</body>
+
+</html>
