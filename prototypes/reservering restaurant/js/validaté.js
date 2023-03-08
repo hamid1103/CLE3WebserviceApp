@@ -31,15 +31,15 @@ function validateFirstName() {
 
 
 
-// function validateReservationDate() {
-//     let reservationDateInput = document.getElementById("datetime");
-//     let reservationDateValue = new Date(reservationDateInput.value).getTime();
-//     let now = new Date().getTime();
-//     if (reservationDateValue <= now) {
-//         reservationDateInput.setCustomValidity("De reserveringsdatum moet in de toekomst liggen");
-//         return false;
-//     } else {
-//         reservationDateInput.setCustomValidity("");
-//         return true;
-//     }
-// }
+function validateReservationDate() {
+    let reservationDateInput = document.getElementById("datetime");
+    let reservationDateValue = new Date(reservationDateInput.value).getTime();
+    let now = new Date().getTime();
+    if (reservationDateValue <= now) {
+        reservationDateInput.setCustomValidity("De reserveringsdatum moet in de toekomst liggen");
+        return false;
+    } else {
+        reservationDateInput.setCustomValidity("");
+        return true;
+    }
+}
