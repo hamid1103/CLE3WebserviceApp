@@ -30,7 +30,7 @@ function renderReviews(){
             "<h3>" +
             reviews[i].place +
             "</h3>" +
-            "<h3>" +
+            "<h3 name='Score'>" + "Score: " + 
             reviews[i].score +
             "</h3>" +
             "<p>"+ reviews[i].summary +"</p>"+
