@@ -39,6 +39,20 @@
       "summary": "De koffie is niet verkeerd hier, alleen zitten er soms kattenharen in.",
       "place": "Tokyo",
       "name": "Neko Neko Cafe"
+    },
+    {
+      "reviewer": "Derek",
+      "place": "Hong Kong",
+      "score": "7",
+      "summary": "Good noodles but the service is a bit slow",
+      "name": "Noodul Shup"
+    },
+    {
+      "reviewer": "John Doe",
+      "place": "Breda",
+      "score": "1",
+      "summary": "Het is niet eens een restaurant, het is een school!",
+      "name": "De rooipannen"
     }
   ]
 }

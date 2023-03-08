@@ -1,4 +1,5 @@
 body{
+    font-family: Calibri;
     background-color: black;
     display: flex;
     flex-direction: row;
@@ -17,12 +18,53 @@ body{
     background-color: white;
     display: flex;
     flex-direction: column;
+    align-items: center;
     border: black 0.5em solid;
     width: 100%;
 }
 
 .review-card{
-    max-width: 10em;
+    width: 40em;
+    border: black 0.5em solid;
+    margin: 1em;
+    padding: 0.3em;
+}
+
+#placeButton{
+    position: fixed;
+    top: 50%;
+    right: 2.5em;
+    width: 9em;
+    height: 1em;
+    text-rendering: auto;
+    color: white;
+    background-color: black;
+    border: white solid 1em;
+    padding: 1em;
+}
+
+#placeButton:hover {
+    position: fixed;
+    top: 50%;
+    right: 2.5em;
+    width: 9em;
+    height: 1em;
+    padding: 1em;
+    text-rendering: auto;
+    color: black;
+    background-color: white;
+    border: black solid 1em;
+}
+
+.review-card h2{
+font-size: 1.6em;
+}
+.review-card h3{
+    font-size: 1.5em;
+}
+
+.review-card p{
+    font-size: 1.3em;
 }
 
 .formrule{
