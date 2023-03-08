@@ -11,7 +11,7 @@ let reserverenBtn = document.querySelector("button[type='submit']");
 
 reserverenBtn.onclick = function(e) {
     e.preventDefault();
-    if (validateFirstName() && validateReservationDate()) {
+    if (validateFirstName()/* && validateReservationDate()*/) {
         // sla de reserveringsgegevens op of stuur ze naar een server
         alert("Bedankt voor het reserveren!");
     }
@@ -31,15 +31,15 @@ function validateFirstName() {
 
 
 
-function validateReservationDate() {
-    let reservationDateInput = document.getElementById("datetime");
-    let reservationDateValue = new Date(reservationDateInput.value).getTime();
-    let now = new Date().getTime();
-    if (reservationDateValue <= now) {
-        reservationDateInput.setCustomValidity("De reserveringsdatum moet in de toekomst liggen");
-        return false;
-    } else {
-        reservationDateInput.setCustomValidity("");
-        return true;
-    }
-}
+// function validateReservationDate() {
+//     let reservationDateInput = document.getElementById("datetime");
+//     let reservationDateValue = new Date(reservationDateInput.value).getTime();
+//     let now = new Date().getTime();
+//     if (reservationDateValue <= now) {
+//         reservationDateInput.setCustomValidity("De reserveringsdatum moet in de toekomst liggen");
+//         return false;
+//     } else {
+//         reservationDateInput.setCustomValidity("");
+//         return true;
+//     }
+// }
