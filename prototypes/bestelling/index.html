@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Pannekoekenhuis CMGT</h1>
+
+        <nav>
+            <a href="#pannekoeken">Pannekoeken</a>
+            <a href="#snacks">Snacks</a>
+            <a href="#desserts">Desserts</a>
+        </nav>
+
+        <h2 id="pannekoeken">Pannekoeken</h2>
+
+        <section>
+            <h3>Pannekoek Groot</h3>
+            <p>€7,00</p>
+            <h4>Beschrijving</h4>
+            <p>Heerlijke grote pannekoek gemaakt volgens eigen recept.</p>
+            <button onclick="addItem(0)">Toevoegen aan bestelling</button>
+        </section>
+
+        <section>
+            <h3>Pannekoek Klein</h3>
+            <p>€7,00</p>
+            <h4>Beschrijving</h4>
+            <p>Net als een grote pannekoek, maar dan net iets kleiner!</p>
+            <button onclick="addItem(1)">Toevoegen aan bestelling</button>
+        </section>
+
+        <section>
+            <h3>Poffertjes</h3>
+            <p>€5,75</p>
+            <h4>Beschrijving</h4>
+            <p>Een traditioneel gerecht, vers gebakken.</p>
+            <button onclick="addItem(2)">Toevoegen aan bestelling</button>
+        </section>
+
+        <h2 id="snacks">Snacks</h2>
+
+        <section>
+            <h3>Belgische Wafel</h3>
+            <p>€4,00</p>
+            <h4>Beschrijving</h4>
+            <p>Een zalige versgebakken wafel op ouderwetse wijze bereid.</p>
+            <button onclick="addItem(3)">Toevoegen aan bestelling</button>
+        </section>
+
+        <section>
+            <h3>Stroopwafel</h3>
+            <p>€3,00</p>
+            <h4>Beschrijving</h4>
+            <p>De meest iconische Nederlandse delicatesse.</p>
+            <button onclick="addItem(4)">Toevoegen aan bestelling</button>
+        </section>
+
+        <h2 id="desserts">Desserts</h2>
+
+        <section>
+            <h3>Vanille Ijs</h3>
+            <p>€3,50</p>
+            <h4>Beschrijving</h4>
+            <p>Een simpel bolletje vanille ijs.</p>
+            <button onclick="addItem(5)">Toevoegen aan bestelling</button>
+        </section>
+
+        <section>
+            <h3>Limburgse Appelvlaai</h3>
+            <p>€4,00</p>
+            <h4>Beschrijving</h4>
+            <p>Een heerlijk stuk Limburgse Appelvlaai</p>
+            <button onclick="addItem(6)">Toevoegen aan bestelling</button>
+        </section>
+    </div>
+    
+
+    <aside>
+        <h1>Winkelmandje</h1>
+        <ul id="list">
+            <!--Voeg hier li s toe-->
+        </ul>
+
+        <button>Bestellen</button>
+    </aside>
+</body>
+</html>
