@@ -1,0 +1,12 @@
+Menu: 
+
+NVDA systeem komt overeen met superNova.
+Beetje moeite met keyboard knoppen vinden. 
+
+VERBETERING: PAUZES NODIG! Screenreader leest alles meteen af. 
+TEST VERBETERING: Braille keyboard
+VERBETERING: Alternatieve interactie -> Enter was moeilijk vinden.
+VERBETERING: Tabellen willen van links naar rechts. Pauzes nodig. Hoe kom ik bij prijzen snel?
+NOTES: Will alles van links naar rechts kunnen lezen. 
+NOTES: Niet iedereen vind tabel beschrijvingen prettig. 
+NOTES: SuperNova kan dat zelf instellen of hij de tabel informatie voorleest. 
