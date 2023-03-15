@@ -1,0 +1,15 @@
+Stand up 13/04/2023
+
+Hamid maakt de backend die de data van alle restaurants bijhoud. 
+Github branches aangemaakt: Corvo, digiMenu
+
+Stand up
+Tom gaat werken aan poster
+Hamid werkt aan main restaurant backend in Devbranch
+File structure: In root folder van project maak je een apparte folder voor je api.
+Main restaurant lijst api moet ook los.
+Style guide opstellen. (Rekeningen houden met contrasten en accessibility.)
+Basic CSS 
+Front-End gewoon in root. /assets/js voor js scripts /assets/img | /assets/css | 
+Zorg ervoor dat je JS files niet conflictende namen heeft.
+Trello updated

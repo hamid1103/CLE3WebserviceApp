@@ -6,18 +6,19 @@ function getRestaurant($id = 'all'){
     global $json_dec, $res_list;
 
     if ($id == 'all'){
+
         return $json_dec;
-    }elseif ($id >= 0){
-        if($id > $res_list.length){
-            return null;
-        }
-        return $res_list[$id];
     }else{
-        return null;
+
+        $keys = array_column($res_list, 'Name');
+        $index = array_search(urldecode($id), $keys);
+
+        return $res_list[$index];
+
     }
 }
 
-function addDataToRestaurant($id, $key, $data){
+function addDataToRestaurant($id, $data){
 
 }
 
