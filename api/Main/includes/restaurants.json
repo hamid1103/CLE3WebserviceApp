@@ -1,48 +1,33 @@
 {
-  "restaurants" : [
+  "restaurants": [
     {
-      "id":0,
+      "id": 0,
       "Name": "The pannenkoekenboot",
       "Location": "Rotterdam",
       "Reviews": [
-
       ],
-      "MenuItems": [
-
-      ]
+      "MenuItems": []
     },
     {
-      "id":1,
+      "id": 1,
       "Name": "The Dread bread",
       "Location": "Amsterdam",
-      "Reviews": [
-
-      ],
-      "MenuItems": [
-
-      ]
+      "Reviews": [],
+      "MenuItems": []
     },
     {
       "id": 2,
-      "name": "Plan B",
+      "Name": "Plan B",
       "Location": "Breda",
-      "Reviews": [
-
-      ],
-      "MenuItems": [
-
-      ]
+      "Reviews": [],
+      "MenuItems": []
     },
     {
-      "id":3,
+      "id": 3,
       "Name": "The Shabu Shabu",
       "Location": "Rotterdam",
-      "Reviews": [
-
-      ],
-      "MenuItems": [
-
-      ]
+      "Reviews": [],
+      "MenuItems": []
     }
   ]
 }
