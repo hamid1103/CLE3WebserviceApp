@@ -5,9 +5,9 @@ require_once "includes/actions.php";
 //Based on the existence of the GET parameter, 1 of the 2 functions will be called
 //TODO: replace with another method once actions gets too big.
 if (!isset($_GET['id'])) {
-    $data = getDishes();
+    $data = getRestaurant();
 } else {
-    $data = getDishDetails($_GET['id']);
+    $data = getRestaurant($_GET['id']);
 }
 
 //Get Action(from $_GET or $_POST)

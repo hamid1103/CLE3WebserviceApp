@@ -1,71 +1,26 @@
 <?php
-/**
- * @return array
- */
-function getDishes()
-{
-    return [
-        [
-            "id" => 1,
-            "name" => "Pizza",
-            "kitchen" => "Italian",
-        ],
-        [
-            "id" => 2,
-            "name" => "Kale",
-            "kitchen" => "Dutch",
-        ],
-        [
-            "id" => 3,
-            "name" => "Lasagna",
-            "kitchen" => "Italian",
-        ],
-        [
-            "id" => 4,
-            "name" => "Kebab",
-            "kitchen" => "Turkish",
-        ],
-        [
-            "id" => 5,
-            "name" => "Paella",
-            "kitchen" => "Spanish",
-        ],
-        [
-            "id" => 6,
-            "name" => "Nasi",
-            "kitchen" => "Asian",
-        ]
-    ];
+$json = file_get_contents('./includes/restaurants.json');
+$json_dec = json_decode($json, true, 10);
+$res_list = $json_dec['restaurants'];
+function getRestaurant($id = 'all'){
+    global $json_dec, $res_list;
+
+    if ($id == 'all'){
+        return $json_dec;
+    }elseif ($id >= 0){
+        if($id > $res_list.length){
+            return null;
+        }
+        return $res_list[$id];
+    }else{
+        return null;
+    }
 }
 
-/**
- * @param $id
- * @return mixed
- */
-function getDishDetails($id)
-{
-    $tags = [
-        1 => [
-            "recipe" => "Put it in the oven and go!",
-            "tags" => ['cheese', 'oven']
-        ],
-        2 => [
-            "recipe" => "You can make this delicious Dutch meal by ...",
-            "tags" => ['unox', 'healthy', 'stamppot', 'boerenkool']
-        ],
-        3 => [
-            "recipe" => "Very nice when your grandma prepares this meal",
-            "tags" => ['omnomnom']
-        ],
-        4 => [
-            "recipe" => "Everytime in the city after midnight",
-            "tags" => ['kapsalon', 'tasty', 'meat']
-        ],
-        5 => [
-            "recipe" => "Specialty when on holiday in Spain",
-            "tags" => ['fish']
-        ],
-    ];
+function addDataToRestaurant($id, $key, $data){
 
-    return $tags[$id];
+}
+
+function addDataToKeyInRestaurant($id, $key, $data){
+
 }
