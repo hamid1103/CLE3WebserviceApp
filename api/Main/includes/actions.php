@@ -6,10 +6,8 @@ function getRestaurantByName($id = 'all'){
     global $json_dec, $res_list;
 
     if ($id == 'all'){
-
         return $json_dec;
     }else{
-
         $keys = array_column($res_list, 'Name');
         $index = array_search($id, $keys);
         if($index){
@@ -17,12 +15,8 @@ function getRestaurantByName($id = 'all'){
         }else{
             return "Not Found ".$id." in ".print_r($keys);
         }
-
-
     }
 }
-
-
 
 function getRestaurant($id = 'all'){
     global $json_dec, $res_list;

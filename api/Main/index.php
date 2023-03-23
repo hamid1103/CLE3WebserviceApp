@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         //Add Actions Here
         if($action == 'newKey'){
             if(!isset($_POST['id']) || !isset($_POST['name']) || !isset($_POST['value'])){
-                $data = 'Missing required header(s). Make sure Request has "id", "name" and "value"';
+                $data = '418 Missing required header(s). Make sure Request has "id", "name" and "value"';
             }else{
                 $id = $_POST['id'];
                 $key = $_POST['name'];
@@ -42,8 +42,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $data = "Error: No Action Defined in post. Make sure you have 'action' header in post with either 'newKey' or 'addTo'";
     }
 }
-
-
 
 //Get Action(from $_GET or $_POST)
     //Get parameters
