@@ -4,15 +4,25 @@
       "id": 0,
       "Name": "The pannenkoekenboot",
       "Location": "Rotterdam",
-      "Reviews": [
-      ],
+      "Reviews": [],
       "MenuItems": []
     },
     {
       "id": 1,
       "Name": "The Dread bread",
       "Location": "Amsterdam",
-      "Reviews": [],
+      "Reviews": [
+        {
+          "reviewer": "Cid",
+          "score": "4",
+          "summary": "Brood"
+        },
+        {
+          "reviewer": "Deral",
+          "score": "7",
+          "summary": "Brood is beter dan domino pizza's"
+        }
+      ],
       "MenuItems": []
     },
     {

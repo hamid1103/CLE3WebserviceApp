@@ -4,7 +4,6 @@ let reviewsHolder;
 let mainContainer;
 let xhttp = new XMLHttpRequest();
 
-
 function init(){
     mainContainer = document.getElementById('main')
     if(mainContainer.dataset.content === 'reviews'){
@@ -15,6 +14,30 @@ function init(){
         console.log('Setting form')
         let form = document.getElementById('ReviewForm')
         form.addEventListener('submit', postReview)
+        //set form data
+        let json;
+        xhttp.open("GET", "./api/Main/index.php", true);
+        xhttp.send()
+        let done = false;
+        xhttp.onload = function () {
+            if (done) {
+                return;
+            }
+            done = true;
+            let reviewFormSelect = document.getElementById('restaurant')
+            json = JSON.parse(this.responseText)
+            let restaurants = json.restaurants
+            for(let i = 0; i < restaurants.length; i++){
+                let curRest = restaurants[i]
+                let newOption = document.createElement('option')
+                newOption.value = i;
+                newOption.innerText = curRest.Name;
+                reviewFormSelect.appendChild(newOption);
+            }
+
+            console.log(json.restaurants)
+            console.log('done')
+        }
     }
 }
 
@@ -24,6 +47,7 @@ function getReviews(){
     xhttp.open("GET", "./api/Main/index.php", true);
     xhttp.send()
     xhttp.onload = function () {
+        let container = document.getElementById('Reviews')
         json = JSON.parse(this.responseText)
         console.log(json)
         let restaurantss = json.restaurants;
@@ -33,7 +57,7 @@ function getReviews(){
             console.log(reviews)
             for (let review of reviews){
                 //reviews code here
-                /*for(let i = 0; i< reviews.length; i++){
+                for(let i = 0; i< reviews.length; i++){
             console.log(reviews[i])
             let newDiv = document.createElement('div');
             newDiv.className = 'review-card'
@@ -51,8 +75,8 @@ function getReviews(){
                 "<p>"+ reviews[i].summary +"</p>"+
                 "Geschreven door: " + reviews[i].reviewer
 
-            container[0].appendChild(newDiv)
-        }*/
+            container.appendChild(newDiv)
+        }
             }
         }
 
@@ -61,9 +85,8 @@ function getReviews(){
 
 function postReview(e){
     let reviewer = document.getElementById('name').value;
-    let name = document.getElementById('restaurantName').value;
+    let name = document.getElementById('restaurant').value;
     let score = document.getElementById('score').value;
-    let place = document.getElementById('location').value;
     let summary = document.getElementById('story').value;
     e.preventDefault();
     /*xhttp.setRequestHeader("Content-type", "multipart/form-data")*/
@@ -78,14 +101,14 @@ function postReview(e){
     let newReviewJson = {
         "reviewer": reviewer,
         "score": score,
-        "place": place,
-        "name": name,
         "summary": summary
     }
     data.append('action', 'addTo')
-    data.append()
+    data.append('id', name)
+    data.append('key', 'Reviews')
+    data.append('value', JSON.stringify(newReviewJson))
+    console.log(JSON.stringify(newReviewJson))
     xhttp.open("POST", "./api/Main/index.php", true);
     xhttp.send(data)
     console.log('SUBIMITTEDs')
-    window.location.replace("./index.html");
 }
