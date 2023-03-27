@@ -68,7 +68,7 @@ textarea {
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid black;
+    border: 5px solid black;
     border-radius: 4px;
     box-sizing: border-box;
     color:black;
@@ -79,7 +79,7 @@ input[type="number"] {
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid black;
+    border: 5px solid black;
     border-radius: 4px;
     box-sizing: border-box;
     color:black;
@@ -89,7 +89,7 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     border: none;
-    background-color: #4CAF50;
+    background-color: black;
     color: white;
     border-radius: 4px;
     cursor: pointer;
