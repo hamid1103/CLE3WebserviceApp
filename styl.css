@@ -21,6 +21,20 @@ button {
     border: none;
 }
 
+#placeButton{
+    color: white;
+    background-color: black;
+    min-width: 80px;
+    min-height: 20px;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    position: fixed;
+    right: 10%;
+    top: 50%;
+}
+
 a {
     color: black;
 }
