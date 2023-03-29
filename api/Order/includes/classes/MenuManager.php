@@ -8,6 +8,16 @@ class MenuManager
     {
         $json_data = file_get_contents(realpath('./includes/data/menus.json'));
         $this->menus = json_decode($json_data);
+
+        //render the dishes ^^
+        foreach ($this->menus as $menu) {
+            foreach ($menu->categories as $category) {
+                foreach ($category->dishes as $index => $dish) {
+                    $dish = $dm->getDish($dish);
+                    $category->dishes[$index] = $dish;
+                }
+            }
+        }
     }
 
     //return all categories from restaurants menu

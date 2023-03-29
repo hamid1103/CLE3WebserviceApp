@@ -22,17 +22,19 @@ $data = array(
     'status' => 500
 );
 
-if (array_key_exists($_GET['_url'], $routes)) {
-    $file = $routes[$_GET['_url']];
-    require_once $file;
+if (isset($_GET['_url'])) {
+    if (array_key_exists($_GET['_url'], $routes)) {
+        $file = $routes[$_GET['_url']];
+        require_once $file;
+    } else {
+        //return not found
+        $data = array(
+            'error' => 'Not found.',
+            'status' => 404
+        );
+    }
 }
-else {
-    //return not found
-    $data = array(
-        'error' => 'Not found.',
-        'status' => 404
-    );
-}
+
 
 //send data
 echo json_encode($data);
