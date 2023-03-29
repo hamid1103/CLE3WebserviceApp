@@ -40,11 +40,21 @@ a {
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: 45vw 45vw;
-    height: 70vh;
-    grid-row: inherit;
-    grid-gap: 15px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    width:400px;
+    height:400px;
+    background-color:#fff;
+    display:grid;
+    grid-template-columns: 200px 200px;
+    grid-row: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
 }
 
 .grid div {
@@ -56,10 +66,11 @@ a {
     background-position: center;
     height: 100%;
     text-align: center;
+    align-content: center;
 }
 
-#digitalMenu {
-    background-image: url("images/DigiMenuBack.png");
+.grid div p {
+    color: white;
 }
 
 a {
