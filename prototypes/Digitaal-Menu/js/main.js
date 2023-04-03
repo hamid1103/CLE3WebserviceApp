@@ -1,13 +1,41 @@
 window.addEventListener('load', init);
 
 //global vars
+//change api later to
 let apiURL = 'menuDatabase/menu1.json';
-let menu;
-
+let openedDetails;
+let detailsareOpened = false;
+let categoryIsOpened = false;
+let closeButton;
+let currentCategory;
 
 function init()
 {
-    menu = document.getElementById('menu');
+    let menu = document.getElementById('menu');
+    collectMenu();
+    let popUp = document.getElementById('popup');
+    popUp.addEventListener(`click`, menuSwitch);
+}
+
+
+function menuSwitch(e) {
+    let target = e.target;
+    if (target.nodeName !== 'H3') {
+        return;
+    }
+
+    if (target.innerHTML === "Menu 1") {
+        apiURL = 'menuDatabase/menu1.json';
+    }
+
+    if (target.innerHTML === "Menu 2") {
+        apiURL = 'menuDatabase/menu2.json';
+    }
+
+    menu.remove();
+    menu = document.createElement('section');
+    menu.setAttribute('id', "menu");
+    document.body.appendChild(menu);
     collectMenu();
 }
 
@@ -19,37 +47,72 @@ function collectMenu() {
         })
         .then(showMenu)
 }
-//Need to add back buttons, stop it from duplicating on multiple clicks, delete other categories when opening one
+
+
 function showMenu(resultedMenu) {
-    for (let i = 0; i < resultedMenu.categorie.length; i++) {
-        let categorieDiv = document.createElement('div');
-        let categorieTitel = document.createElement('h1');
+    for (let i = 0; i < resultedMenu.category.length; i++) {
+        let categoryDiv = document.createElement('div');
+        let categoryTitle = document.createElement('h1');
 
-        categorieDiv.setAttribute('id', Object.getOwnPropertyNames(resultedMenu.categorie[i]));
-        categorieDiv.setAttribute('role', 'button');
+        categoryDiv.setAttribute('id', Object.getOwnPropertyNames(resultedMenu.category[i]));
+        categoryDiv.setAttribute('role', 'button');
 
-        let categorieNaam = Object.getOwnPropertyNames(resultedMenu.categorie[i]);
-        categorieTitel.innerHTML = categorieNaam;
+        let categoryName = Object.getOwnPropertyNames(resultedMenu.category[i]);
+        categoryTitle.innerHTML = categoryName;
 
-        categorieTitel.addEventListener('click', function (e) {
-                let huidigeCategorie = resultedMenu.categorie[i][categorieNaam];
-                for (let gerechtenLoop = 0; gerechtenLoop < huidigeCategorie.length; gerechtenLoop++) {
-                    let categorieGerecht = document.createElement('div');
-                    let gerechtTitel = document.createElement('h2');
-                    categorieGerecht.appendChild(gerechtTitel);
-                    gerechtTitel.innerHTML = resultedMenu.categorie[i][categorieNaam][gerechtenLoop].naam;
+        categoryTitle.addEventListener('click', function () {
+                if (categoryIsOpened) {
+                    openCategory.removeChild(closeButton);
+                    for (let dishLoop = 0; dishLoop < currentCategory.length; dishLoop++) {
+                        openCategory.removeChild(openCategory.lastChild);
+                    }
+                }
 
-                    gerechtTitel.addEventListener('click', function (e){
-                            let gerechtDetails = document.createElement('h3');
-                            gerechtDetails.innerHTML = `Beschrijving: ${resultedMenu.categorie[i][categorieNaam][gerechtenLoop].beschrijving}<br />Prijs: ${resultedMenu.categorie[i][categorieNaam][gerechtenLoop].prijs}`
-                            categorieGerecht.appendChild(gerechtDetails);
+                currentCategory = resultedMenu.category[i][categoryName];
+
+                closeButton = document.createElement('button');
+                closeButton.innerHTML = `Sluit ${categoryName} lijst`;
+
+
+                for (let dishLoop = 0; dishLoop < currentCategory.length; dishLoop++) {
+                    let categoryDish = document.createElement('div');
+                    let dishTitle = document.createElement('h2');
+                    categoryDish.appendChild(dishTitle);
+                    dishTitle.innerHTML = resultedMenu.category[i][categoryName][dishLoop].naam;
+                                                                                        //Keep Dutch, name in JSON
+                    dishTitle.addEventListener('click', function (){
+                            if (detailsareOpened) {
+                               openedDetails.remove();
+                            }
+
+                            let dishDetails = document.createElement('h3');
+                            dishDetails.innerHTML = `Beschrijving: ${resultedMenu.category[i][categoryName][dishLoop].beschrijving}<br />Prijs: ${resultedMenu.category[i][categoryName][dishLoop].prijs}`
+                            categoryDish.appendChild(dishDetails);                                                   //Keep Dutch, name in JSON  -->                                               same here
+
+                            openedDetails = dishDetails;
+                            detailsareOpened = true;
                     });
 
-                    categorieDiv.appendChild(categorieGerecht);
+                    categoryDiv.appendChild(categoryDish);
                 }
+
+                closeButton.addEventListener(`click`, function (){
+                    if (categoryIsOpened) {
+                        openCategory.removeChild(closeButton);
+                        for (let dishLoop = 0; dishLoop < currentCategory.length; dishLoop++) {
+                            openCategory.removeChild(openCategory.lastChild);
+                        }
+                        categoryIsOpened = false;
+                    }
+                })
+
+                categoryDiv.appendChild(closeButton);
+
+                openCategory = categoryDiv;
+                categoryIsOpened = true;
         })
 
-        categorieDiv.appendChild(categorieTitel);
-        menu.appendChild(categorieDiv);
+        categoryDiv.appendChild(categoryTitle);
+        menu.appendChild(categoryDiv);
     }
 }
