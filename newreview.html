@@ -11,24 +11,24 @@
 <section id="main" data-content="form">
     <form id="ReviewForm">
         <div class="formrule">
-            <label for="restaurant">Restaurant</label>
+            <label aria-label="Selecteer restaurant!" for="restaurant">Restaurant</label>
             <select name="restaurant" id="restaurant" >
             </select>
         </div>
         <div class="formrule">
-            <label for="score">Score tot en met 10</label>
+            <label aria-label="Nummer score van 1 tot en met 10." for="score">Score tot en met 10</label>
             <input name="score" id="score">
         </div>
         <div class="formrule">
-            <label for="story">Vertel ons wat u van het restaurant vond</label>
+            <label aria-label="Geef een verhaal." for="story">Vertel ons wat u van het restaurant vond</label>
             <textarea name="story" id="story"></textarea>
         </div>
         <div class="formrule">
-            <label for="name">Wat is uw naam?</label>
+            <label aria-label="Wat is uw naam? " for="name">Wat is uw naam?</label>
             <input name="name" id="name">
         </div>
-        <div class="submitbutton">
-            <input type="submit" id="submitB" value="Plaats review!">
+        <div class="formrule">
+            <input type="submit" aria-label="Plaats de review!" id="submitB" value="Plaats review!">
         </div>
     </form>
 </section>

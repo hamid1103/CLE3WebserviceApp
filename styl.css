@@ -38,3 +38,10 @@ button {
 a {
     color: black;
 }
+
+#ReviewForm .formrule {
+    display: flex;
+    margin-bottom: 1vh;
+    flex-direction: row;
+justify-content: space-between;
+}
