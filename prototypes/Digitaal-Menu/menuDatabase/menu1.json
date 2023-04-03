@@ -1,0 +1,81 @@
+{
+  "categorie": [
+    {
+      "soepen": [
+        {
+          "naam": "Provençaalse Tomaat",
+          "beschrijving": "Stevige soep van trostomaten met basilicum en room",
+          "prijs": "€2,75"
+        },
+        {
+          "naam": "Franse Uiensoep",
+          "beschrijving": "Soep van uien geserveerd met strokbrood en Gruyere kaas",
+          "prijs": "€3,45"
+        },
+        {
+          "naam": "Baskische Vissoep",
+          "beschrijving": "Romige vissoep met zalm, mosselen en crevettes",
+          "prijs": "€6,35"
+        }
+      ]
+    },
+    {
+      "vleesgerechten": [
+        {
+          "naam": "Black Angus Steak",
+          "beschrijving": "Gegrilde Black Angus rumpsteak met rode wijnsaus",
+          "prijs": "€15,90"
+        },
+        {
+          "naam": "Hertenstoof",
+          "beschrijving": "Hertenstoof met wintergroente, geserveerd met rode kool en aardappelpuree",
+          "prijs": "€14,55"
+        },
+        {
+          "naam": "Cerdo Belga",
+          "beschrijving": "Gebraden varkenshaas met saus van trappistenbier en spek",
+          "prijs": "€11,75"
+        },
+        {
+          "naam": "Tournedos",
+          "beschrijving": "Gebakken ossenhaas met pepersaus",
+          "prijs": "€21,90"
+        },
+        {
+          "naam": "Choucroute d'Alsace",
+          "beschrijving": "Combinatie van zuurkool uit het vat met casselerrib, buikspek, rookworst en Frankfurter. Geserveerd met rode wijnjus en mosterd",
+          "prijs": "€14,65"
+        },
+        {
+          "naam": "Pollo trufa",
+          "beschrijving": "Gebakken hoenfilet met bospaddenstoelen en romige truffeljus",
+          "prijs": "€12,95"
+        }
+      ]
+    },
+    {
+      "koffie": [
+        {
+          "naam": "La Chouffe Coffee",
+          "beschrijving": "La Chouffe Likeur",
+          "prijs": "€4,20"
+        },
+        {
+          "naam": "Spanish Coffee",
+          "beschrijving": "Licor 43",
+          "prijs": "€4,25"
+        },
+        {
+          "naam": "French Coffee",
+          "beschrijving": "Grand Marnier",
+          "prijs": "€4,95"
+        },
+        {
+          "naam": "Irish Coffee",
+          "beschrijving": "Irish Whiskey",
+          "prijs": "€4,15"
+        }
+      ]
+    }
+  ]
+}

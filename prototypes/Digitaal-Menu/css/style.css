@@ -1,20 +1,20 @@
 body {
+    font-family: 'Atkinson Hyperlegible';
     text-align: center;
     margin: 0;
     font-size: larger;
 }
 
-table {
-    margin: 0 auto;
-    border: #0d0d0d 3px solid;
+
+h1 {
+    font-size: 40px;
+    background-color: lightgrey;
 }
 
-td {
-    max-width: 30vw;
-    padding: 1vw;
+h2 {
+    background-color: #e3e3e3;
 }
 
-button {
-    margin: 0 auto;
-    display: none;
+h3 {
+    background-color: #dfdfdf;
 }
