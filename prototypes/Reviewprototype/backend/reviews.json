@@ -1,1 +1,72 @@
-{"reviews":[{"id":0,"reviewer":"Stan","score":3,"summary":"Grappige locatie, maar de pannekoeken smaken oud","place":"Rotterdam","name":"De pannenkoekeboot"},{"id":1,"reviewer":"Brom","score":5,"summary":"De frietjes zijn lekker maar hun saus smaakt oud en zuur.","place":"Breda","name":"Friet van bram"},{"id":2,"reviewer":"Michelle","score":8,"summary":"Had mijn verjaardag hier, pannenkoeken zijn middelmatig maar ze konden makkelijk al onze gasten snel serveren.","place":"Rotterdam","name":"De pannenkoekeboot"},{"id":5,"reviewer":"Drake","score":3,"summary":"Grappige locatie, maar de pannekoeken","place":"Rotterdam","name":"De pannenkoekeboot"},{"id":6,"reviewer":"Loki","score":7,"summary":"De koffie is niet verkeerd hier, alleen zitten er soms kattenharen in.","place":"Tokyo","name":"Neko Neko Cafe"},{"reviewer":"Derek","place":"Hong Kong","score":"7","summary":"Good noodles but the service is a bit slow","name":"Noodul Shup"},{"reviewer":"John Doe","place":"Breda","score":"1","summary":"Het is niet eens een restaurant, het is een school!","name":"De rooipannen"},{"reviewer":"John Doe","place":"Rotterdam","score":"6","summary":"Lekker eten","name":"Umis"},{"reviewer":"Dready Teddy","place":"Rotterdam","score":"9","summary":"Poffertjes zijn heerlijk","name":"Poffer plek"}]}
+{
+  "reviews": [
+    {
+      "id": 0,
+      "reviewer": "Stan",
+      "score": 3,
+      "summary": "Grappige locatie, maar de pannekoeken smaken oud",
+      "place": "Rotterdam",
+      "name": "De pannenkoekeboot"
+    },
+    {
+      "id": 1,
+      "reviewer": "Brom",
+      "score": 5,
+      "summary": "De frietjes zijn lekker maar hun saus smaakt oud en zuur.",
+      "place": "Breda",
+      "name": "Friet van bram"
+    },
+    {
+      "id": 2,
+      "reviewer": "Michelle",
+      "score": 8,
+      "summary": "Had mijn verjaardag hier, pannenkoeken zijn middelmatig maar ze konden makkelijk al onze gasten snel serveren.",
+      "place": "Rotterdam",
+      "name": "De pannenkoekeboot"
+    },
+    {
+      "id": 5,
+      "reviewer": "Drake",
+      "score": 3,
+      "summary": "Grappige locatie, maar de pannekoeken",
+      "place": "Rotterdam",
+      "name": "De pannenkoekeboot"
+    },
+    {
+      "id": 6,
+      "reviewer": "Loki",
+      "score": 7,
+      "summary": "De koffie is niet verkeerd hier, alleen zitten er soms kattenharen in.",
+      "place": "Tokyo",
+      "name": "Neko Neko Cafe"
+    },
+    {
+      "reviewer": "Derek",
+      "place": "Hong Kong",
+      "score": "7",
+      "summary": "Good noodles but the service is a bit slow",
+      "name": "Noodul Shup"
+    },
+    {
+      "reviewer": "John Doe",
+      "place": "Breda",
+      "score": "1",
+      "summary": "Het is niet eens een restaurant, het is een school!",
+      "name": "De rooipannen"
+    },
+    {
+      "reviewer": "John Doe",
+      "place": "Rotterdam",
+      "score": "6",
+      "summary": "Lekker eten",
+      "name": "Umis"
+    },
+    {
+      "reviewer": "Dready Teddy",
+      "place": "Rotterdam",
+      "score": "9",
+      "summary": "Poffertjes zijn heerlijk",
+      "name": "Poffer plek"
+    }
+  ]
+}

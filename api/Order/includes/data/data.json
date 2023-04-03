@@ -1,0 +1,30 @@
+{
+  "comment" : "OLD FILE, TO BE REMOVED",
+  "menus" : [
+    {
+      "restaurant_id" : 0,
+      "categories" : [
+        {
+          "id" : 0,
+          "name" : "something",
+          "dishes" : [
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "orders" : [
+    {
+      "id" : 0
+    }
+  ],
+  "dishes" :  [
+    {
+      "id" : 0,
+      "name" : "pannekoek",
+      "description" : "something comforting",
+      "price" : 10.00
+    }
+  ]
+}
