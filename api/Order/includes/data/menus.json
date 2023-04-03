@@ -1,0 +1,14 @@
+[
+  {
+    "restaurant_id" : 0,
+    "categories" : [
+      {
+        "id" : 0,
+        "name" : "something",
+        "dishes" : [
+          0
+        ]
+      }
+    ]
+  }
+]
