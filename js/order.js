@@ -1,5 +1,5 @@
-const URL_RESTAURANTS = 'http://localhost/CLE3WebserviceApp/api/main';
-const URL_MENUS = 'http://localhost/CLE3WebserviceApp/api/order/menu'
+const URL_RESTAURANTS = './api/main';
+const URL_MENUS = './api/order/menu'
 
 let restaurants = [];
 let restaurant = {};
