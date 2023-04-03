@@ -2,7 +2,7 @@ window.addEventListener('load', init);
 
 //global vars
 //change api later to
-let apiURL = 'menuDatabase/menu1.json';
+let apiURL = 'api/menuDatabase/menu1.json';
 let openedDetails;
 let detailsareOpened = false;
 let categoryIsOpened = false;
@@ -25,11 +25,11 @@ function menuSwitch(e) {
     }
 
     if (target.innerHTML === "Menu 1") {
-        apiURL = 'menuDatabase/menu1.json';
+        apiURL = 'api/menuDatabase/menu1.json';
     }
 
     if (target.innerHTML === "Menu 2") {
-        apiURL = 'menuDatabase/menu2.json';
+        apiURL = 'api/menuDatabase/menu2.json';
     }
 
     menu.remove();
