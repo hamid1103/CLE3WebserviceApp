@@ -20,5 +20,6 @@ function setWP(e){
         console.log('not img. ' + imgsrc)
     }
     body.style.backgroundImage = `url(${imgsrc})`;
+    body.style.backgroundSize = 'cover';
 
 }
