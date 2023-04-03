@@ -49,13 +49,13 @@ function getReviews() {
     xhttp.onload = function () {
         let container = document.getElementById('Reviews')
         json = JSON.parse(this.responseText)
-        console.log(json)
+        console.log(this.responseText)
         let restaurantss = json.restaurants;
         for (let restaurant of restaurantss) {
             let RestaurantDiv = document.createElement('section')
             let restName = document.createElement('h2')
             restName.innerText = restaurant.Name
-            RestaurantDiv.className = '';
+            RestaurantDiv.ariaLabel = 'Reviews voor ' + restaurant.Name;
             RestaurantDiv.appendChild(restName)
 
             console.log(restaurant)

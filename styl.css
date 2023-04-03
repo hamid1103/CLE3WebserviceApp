@@ -78,3 +78,10 @@ a {
     text-decoration: none;
     font-size: xx-large;
 }
+
+#ReviewForm .formrule {
+    display: flex;
+    margin-bottom: 1vh;
+    flex-direction: row;
+justify-content: space-between;
+}
