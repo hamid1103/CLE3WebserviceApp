@@ -9,18 +9,33 @@ let restaurant = {};
 let params = new URLSearchParams(document.location.search);
 let id = params.get('id');
 
+//init call
+window.onload = () => init();
 
 async function init() {
-    if (typeof id != undefined) {
+    if (id != null) {
+        //reveal menu
+        let container = document.getElementById('order-container-menu');
+        container.hidden = false;
+
+        //fetch
         await fetchRestaurantInfo();
         await fetchRestaurantMenu();
 
+        //load
         await loadRestaurantInfo();
         await loadMenu();
-    } //else {
+    }
+    
+    else {
+        //reveal restaurant selection
+        let container = document.getElementById('order-restaurant-selection');
+        container.hidden = false;
+
+        //fetch & load
         await fetchRestaurants();
         await loadRestaurants();
-    //}
+    }
 }
 
 async function loadMenu() {
@@ -132,5 +147,3 @@ async function fetchMenus() {
 
     restaurants = json;
 }
-
-init()
