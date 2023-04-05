@@ -4,9 +4,23 @@
     "categories" : [
       {
         "id" : 0,
-        "name" : "something",
+        "name" : "Pannekoeken",
         "dishes" : [
-          0
+          0, 1, 2
+        ]
+      },
+      {
+        "id" : 0,
+        "name" : "Snacks",
+        "dishes" : [
+          3, 4
+        ]
+      },
+      {
+        "id" : 0,
+        "name" : "Desserts",
+        "dishes" : [
+          5,6
         ]
       }
     ]

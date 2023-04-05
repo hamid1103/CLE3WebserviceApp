@@ -97,6 +97,11 @@ a {
     text-decoration: underline;
 }
 
+#order-category-nav {
+    display: flex;
+    gap: 15px;
+}
+
 #ReviewForm .formrule {
     display: flex;
     margin-bottom: 1vh;
