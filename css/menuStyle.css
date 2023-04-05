@@ -1,0 +1,31 @@
+body {
+    font-family: 'Atkinson Hyperlegible';
+    text-align: center;
+    margin: 0;
+    font-size: larger;
+}
+
+
+h1 {
+    font-size: 40px;
+    background-color: lightgrey;
+}
+
+h2 {
+    background-color: #ededed;
+}
+
+h3 {
+    background-color: #efefef;
+}
+
+#popup {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    background-color: #4cacbe;
+}
+
+#popup h3 {
+    background-color: #0d66c2;
+}

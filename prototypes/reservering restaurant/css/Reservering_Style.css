@@ -52,9 +52,13 @@ form {
     color:black;
 }
 
-.f, .restaurant, .datum-tijd, .aantal-personen, .opmerkingen {
+.firstname,
+.restaurant,
+.datum-tijd,
+.aantal-personen,
+.opmerkingen {
     margin-bottom: 20px;
-    color:black;
+    color: black;
 }
 
 label {
@@ -64,32 +68,39 @@ label {
 
 input[type="text"],
 select,
-textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid black;
-    border-radius: 4px;
-    box-sizing: border-box;
-    color:black;
-}
-
+textarea,
 input[type="datetime-local"],
 input[type="number"] {
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid black;
+    border: 5px solid black;
     border-radius: 4px;
     box-sizing: border-box;
-    color:black;
+    color: black;
 }
 
+#reserveringen-container{
+    border: black 0.5em solid;
+    margin: 1em;
+    padding: 0.3em;
+    font-size: 1.3em;
+}
+
+.reservering{
+    border: black 0.5em solid;
+    margin: 1em;
+    padding: 0.3em;
+    font-size: 1.3em;
+}
+.reservering h2,h3,p{
+    font-size: 1.0em;
+}
 button {
     padding: 10px 20px;
     font-size: 16px;
     border: none;
-    background-color: #4CAF50;
+    background-color: black;
     color: white;
     border-radius: 4px;
     cursor: pointer;
@@ -103,4 +114,27 @@ button:hover {
     color: red;
     font-size: 14px;
     margin-top: 5px;
+}
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    form {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    input[type="text"],
+    select,
+    textarea,
+    input[type="datetime-local"],
+    input[type="number"] {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
 }

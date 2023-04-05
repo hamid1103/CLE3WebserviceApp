@@ -1,0 +1,232 @@
+{
+  "category": [
+    {
+      "koude voorgerechten": [
+        {
+          "naam": "Brood met kruidenboter",
+          "beschrijving": "",
+          "prijs": "€4,30"
+        },
+        {
+          "naam": "Hollandse garnalencocktail",
+          "beschrijving": "",
+          "prijs": "€10,75"
+        },
+        {
+          "naam": "Gerookte paling op toast",
+          "beschrijving": "",
+          "prijs": "€10,95"
+        },
+        {
+          "naam": "Haring met uitjes en zuur",
+          "beschrijving": "2 stuks",
+          "prijs": "€7,95"
+        },
+        {
+          "naam": "Combinatie van vis",
+          "beschrijving": "gerookte paling, Hollandse garnalen en haring",
+          "prijs": "€12,50"
+        },
+        {
+          "naam": "Trio van Hollandse worsten",
+          "beschrijving": "met brood, Amsterdams zuur, en grove mosterd",
+          "prijs": "€9,50"
+        }
+      ]
+    },
+    {
+      "warme voorgerechten": [
+        {
+          "naam": "Tomatensoep",
+          "beschrijving": "",
+          "prijs": "€5,75"
+        },
+        {
+          "naam": "Erwtensoep",
+          "beschrijving": "met roggebrood en katenspek",
+          "prijs": "€6,75"
+        },
+        {
+          "naam": "Bitterballen",
+          "beschrijving": "6 stuks met grove Zaanse mosterd, ook vegetarisch te verkrijgen",
+          "prijs": "€6,30"
+        },
+        {
+          "naam": "Geitenkaas kroketjes",
+          "beschrijving": "3 stuks met salade en honing mosterd saus. extra €2,15",
+          "prijs": "€6,95"
+        },
+        {
+          "naam": "Hollandse garnalenkroketjes",
+          "beschrijving": "3 stuks met een cocktailsausje. extra €2,35",
+          "prijs": "€7,80"
+        }
+      ]
+    },
+    {
+      "traditionele hollandse gerechten": [
+        {
+          "naam": "Hutspot",
+          "beschrijving": "geserveerd met een rookworst of een gehaktbal",
+          "prijs": "€15,25"
+        },
+        {
+          "naam": "Boerenkoolstampot",
+          "beschrijving": "geserveerd met een rookworst of een gehaktbal",
+          "prijs": "€15,25"
+        },
+        {
+          "naam": "Zuurkoolstampot",
+          "beschrijving": "geserveerd met een rookworst of een gehaktbal",
+          "prijs": "€15,25"
+        },
+        {
+          "naam": "Combinatie van hutspot, boerenkoolstamppot en zuurkoolstamppot",
+          "beschrijving": "geserveerd met een rookworst of een gehaktbal",
+          "prijs": "€15,25"
+        },
+        {
+          "naam": "Runderhachee",
+          "beschrijving": "gestoofd rundvlees met rode kool en aardappelpuree",
+          "prijs": "€15,95"
+        },
+        {
+          "naam": "Ovenschotel",
+          "beschrijving": "bloemkool, gehakt, uien, kerrie, Old Amsterdam kaas en aardappelpuree",
+          "prijs": "€15,95"
+        },
+        {
+          "naam": "Kapucijners",
+          "beschrijving": "Kapucijners met speklapjes, zuur, piccalilly, uien en appelmoes",
+          "prijs": "€15,95"
+        }
+      ]
+    },
+    {
+      "vleesgerechten": [
+        {
+          "naam": "Biefstuk",
+          "beschrijving": "200 gram, met gebakken champignons, uien, frietjes en seizoensgroenten",
+          "prijs": "€18,95"
+        },
+        {
+          "naam": "Kipsaté",
+          "beschrijving": "200 gram, met atjar, kroepoek, gebakken uitjes, frietjes en salade",
+          "prijs": "€17,95"
+        },
+        {
+          "naam": "Oerbeenham",
+          "beschrijving": "450 gram, met een honingmosterdsaus, frietjes en salade",
+          "prijs": "€19,95"
+        },
+        {
+          "naam": "Gepekelde varkens ribkarbonade",
+          "beschrijving": "met frietjes en salade",
+          "prijs": "€16,95"
+        }
+      ]
+    },
+    {
+      "visgerechten": [
+        {
+          "naam": "Zeebaars gestoomd met verse groene kruiden",
+          "beschrijving": "met aardappelpuree en groentenmix",
+          "prijs": "€19,25"
+        },
+        {
+          "naam": "Zalm geserveerd met een kreeftensaus",
+          "beschrijving": "met aardappelpuree en groentenmix",
+          "prijs": "€19,25"
+        },
+        {
+          "naam": "Kabeljauwfilet met hollandaise saus",
+          "beschrijving": "met frietjes en salade",
+          "prijs": "€19,25"
+        }
+      ]
+    },
+    {
+      "vegetarische gerechten": [
+        {
+          "naam": "Hutspot",
+          "beschrijving": "met appelmoes, picalilly en zuur",
+          "prijs": "€14,50"
+        },
+        {
+          "naam": "Boerenkoolstampot",
+          "beschrijving": "met appelmoes, picalilly en zuur",
+          "prijs": "€14,50"
+        },
+        {
+          "naam": "Ovenschotel",
+          "beschrijving": "prei, uien, kerrie, Old Amsterdam kaas en aardappelpuree",
+          "prijs": "€14,50"
+        },
+        {
+          "naam": "Kaasfondue",
+          "beschrijving": "met brood, rauwkost en een salade",
+          "prijs": "€15,75"
+        },
+        {
+          "naam": "Gegratineerde geitenkaas salade",
+          "beschrijving": "met appel, honing, walnoten en brood",
+          "prijs": "€15,25"
+        }
+      ]
+    },
+    {
+      "nagerechten": [
+        {
+          "naam": "Vlaflip",
+          "beschrijving": "",
+          "prijs": "€4,95"
+        },
+        {
+          "naam": "Boerenjongensijs met slagroom",
+          "beschrijving": "",
+          "prijs": "€6,95"
+        },
+        {
+          "naam": "Appeltaart met slagroom",
+          "beschrijving": "ijs €1,95 extra",
+          "prijs": "€6,95"
+        },
+        {
+          "naam": "Poffertjes",
+          "beschrijving": "",
+          "prijs": "€6,25"
+        },
+        {
+          "naam": "Kaasplankje",
+          "beschrijving": "4 Hollandse Kazen",
+          "prijs": "€8,95"
+        },
+        {
+          "naam": "Stroopwafelijs",
+          "beschrijving": "met een stroopwafeltje en slagroom",
+          "prijs": "€6,95"
+        },
+        {
+          "naam": "Chocoduo met advocaat",
+          "beschrijving": "chocolademousse en -ijs",
+          "prijs": "€7,25"
+        },
+        {
+          "naam": "Oma's koektrommel",
+          "beschrijving": "met 2 likeurtjes en Hollands koek assortiment",
+          "prijs": "€7,95"
+        },
+        {
+          "naam": "Koffie speciaal",
+          "beschrijving": "Irish-Whisky, French-Grand Marnier, Italian-Amaretto, Spanish-Tia Maria, Baileys",
+          "prijs": "€6,95"
+        },
+        {
+          "naam": "Jenever",
+          "beschrijving": "Jong, oud, korenwijn",
+          "prijs": "€4,95"
+        }
+      ]
+    }
+  ]
+}
