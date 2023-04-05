@@ -12,6 +12,32 @@ let id = params.get('id');
 //init call
 window.onload = () => init();
 
+//code for calculation
+let total = 0;
+let order = [];
+
+function updateList() {
+    let ul = document.getElementById('order-list');
+    let totalPrice = document.getElementById('order-total');
+
+    //remove all first
+    ul.innerHTML = '';
+    total = 0;
+
+    //add all
+    order.forEach(dish => {
+        total += dish.price;
+
+        let li = document.createElement('li');
+        li.innerText = `${dish.name} - ${dish.price}`
+
+        ul.appendChild(li);
+    });
+
+    totalPrice.innerText = `Totaal: ${total}`;
+}
+
+//everything else
 async function init() {
     if (id != null) {
         //reveal menu
@@ -76,7 +102,12 @@ async function loadMenu() {
             //buttone
             let btn = document.createElement('button');
             btn.innerText = 'Toevoegen aan bestelling';
-            //TODO add eventhandler for counting total?
+
+            //add eventhandler for counting total
+            btn.addEventListener('click', () => {
+                order.push(dish);
+                updateList();
+            });
 
             //add to section
             section.appendChild(h3);
