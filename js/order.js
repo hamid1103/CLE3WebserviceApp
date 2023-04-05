@@ -87,6 +87,7 @@ async function loadMenu() {
 
             //add section to container
             let container = document.getElementById('order-container-items');
+            container.appendChild(h2); //title
             container.appendChild(section);
         });
     });
