@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Prototype Reserveringsdienst</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <script src="js/validaté.js" defer></script>
+  <link rel="stylesheet" type="text/css" href="css/Reservering_Style.css">
+    <script src="./js/show_reserveringen.js" defer></script>
+
+
 </head>
 
 
@@ -21,8 +22,8 @@
 
 </section>
 
-<form action="telefoon.html" method="post">
-    <div class="f">
+<form id="forum" action="./backend/nieuwe_reservering.php" method="post">
+    <div class="fierstname">
         <label for="firstname">voornaam</label>
         <input id="firstname" name="firstname" type="text"placeholder="voornaam" required>
     </div>
@@ -54,7 +55,12 @@
     </div>
 
     <div>
-        <button type="submit" class="button">Reserveren</button>
+        <button type="submit" class="button" aria-label="Reserveren">Reserveren</button>
+    </div>
+    <div>
+
+
+
     </div>
 </form>
 
