@@ -2,9 +2,10 @@ window.addEventListener("load", init)
 
 let grid;
 let body;
-
+let imgview;
 function init(){
     body = document.body;
+    imgview = document.getElementById('viewwindow')
     grid = document.getElementById('grid')
     body.addEventListener('mouseover', setWP)
 }
@@ -19,7 +20,9 @@ function setWP(e){
         imgsrc = ''
         console.log('not img. ' + imgsrc)
     }
-    body.style.backgroundImage = `url(${imgsrc})`;
-    body.style.backgroundSize = 'cover';
+    imgview.src = imgsrc;
+    imgview.style.display='block';
+    /*body.style.backgroundImage = `url(${imgsrc})`;
+    body.style.backgroundSize = 'cover';*/
 
 }
