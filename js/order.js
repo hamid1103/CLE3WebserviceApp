@@ -82,9 +82,10 @@ async function loadMenu() {
         h2 = document.createElement('h2');
         h2.innerText = cat.name;
         h2.setAttribute('id', `order-category-${cat.id}`);
+        container.appendChild(h2); //title
 
         //dishes
-        cat.dishes.forEach((dish) => {
+        cat.dishes.forEach(async (dish) => {
             //section
             let section = document.createElement('section');
 
@@ -118,7 +119,6 @@ async function loadMenu() {
 
             //add section to container
             let container = document.getElementById('order-container-items');
-            container.appendChild(h2); //title
             container.appendChild(section);
         });
     });

@@ -1,8 +1,44 @@
 [
   {
     "id" : 0,
-    "name" : "pannekoek",
-    "description" : "something comforting",
-    "price" : 10.00
+    "name" : "Pannekoek Groot",
+    "description" : "Heerlijke grote pannekoek gemaakt volgens eigen recept.",
+    "price" : 7.00
+  },
+  {
+    "id" : 1,
+    "name" : "Pannekoek Klein",
+    "description" : "Net als een grote pannekoek, maar dan net iets kleiner!",
+    "price" : 7.00
+  },
+  {
+    "id" : 2,
+    "name" : "Poffertjes",
+    "description" : "Een traditioneel gerecht, vers gebakken.",
+    "price" : 5.75
+  },
+  {
+    "id" : 3,
+    "name" : "Belgische Wafel",
+    "description" : "Een zalige versgebakken wafel op ouderwetse wijze bereid.",
+    "price" : 4.00
+  },
+  {
+    "id" : 4,
+    "name" : "Stroopwafel",
+    "description" : "De meest iconische Nederlandse delicatesse.",
+    "price" : 3.00
+  },
+  {
+    "id" : 5,
+    "name" : "Vanille Ijs",
+    "description" : "Een simpel bolletje vanille ijs.",
+    "price" : 3.50
+  },
+  {
+    "id" : 6,
+    "name" : "Limburgse Appelvlaai",
+    "description" : "Een heerlijk stuk Limburgse Appelvlaai",
+    "price" : 4.00
   }
 ]
