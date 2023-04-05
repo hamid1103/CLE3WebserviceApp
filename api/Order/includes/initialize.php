@@ -33,6 +33,12 @@ if (isset($_GET['_url'])) {
             'status' => 404
         );
     }
+} else {
+    //return not found
+    $data = array(
+        'error' => 'Not found.',
+        'status' => 404
+    );
 }
 
 
