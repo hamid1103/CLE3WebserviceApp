@@ -85,3 +85,25 @@ a {
     flex-direction: row;
 justify-content: space-between;
 }
+
+.reviewcard{
+    border: 1px solid black;
+    margin-top: 1vh;
+}
+.reviewcard:hover{
+    border: 1px solid black;
+    margin-top: 1vh;
+    background-color: #888888;
+}
+.reviewcard .favOn{
+    width: 3em;
+    height: 3em;
+    object-fit: contain;
+    background-color: red;
+}
+.reviewcard .favOff{
+    width: 3em;
+    height: 3em;
+    object-fit: contain;
+    background-color: white;
+}

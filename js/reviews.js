@@ -3,14 +3,23 @@ window.addEventListener('load', init)
 let reviewsHolder;
 let mainContainer;
 let xhttp = new XMLHttpRequest();
+let SavedjsonData;
+let modal;
+let modalcontent;
+var span
 
 function init() {
+    span = document.getElementsByClassName("close")[0];
+    modalcontent = document.getElementById('modalcontent');
+    modal = document.getElementById('myModal');
     mainContainer = document.getElementById('main')
     if (mainContainer.dataset.content === 'reviews') {
         reviewsHolder = document.getElementById('reviews')
         getReviews();
         console.log('getting reviews')
-    } else if (mainContainer.dataset.content === 'form') {
+        window.addEventListener('click', clickHandler)
+    } else
+        if (mainContainer.dataset.content === 'form') {
         console.log('Setting form')
         let form = document.getElementById('ReviewForm')
         form.addEventListener('submit', postReview)
@@ -41,6 +50,11 @@ function init() {
     }
 }
 
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
 function getReviews() {
     let reviews;
     let json;
@@ -50,12 +64,16 @@ function getReviews() {
         let container = document.getElementById('Reviews')
         json = JSON.parse(this.responseText)
         console.log(this.responseText)
+        //save data localy
+        SavedjsonData = json;
         let restaurantss = json.restaurants;
         for (let restaurant of restaurantss) {
             let RestaurantDiv = document.createElement('section')
             let restName = document.createElement('h2')
+            RestaurantDiv.className = 'restname'
             restName.innerText = restaurant.Name
             RestaurantDiv.ariaLabel = 'Reviews voor ' + restaurant.Name;
+            RestaurantDiv.dataset.restid = restaurant.id;
             RestaurantDiv.appendChild(restName)
 
             console.log(restaurant)
@@ -64,14 +82,36 @@ function getReviews() {
             for (let i = 0; i < reviews.length; i++) {
                 console.log(reviews[i])
                 let newDiv = document.createElement('div');
-                newDiv.className = 'review-card'
+
+                let newFav = document.createElement('img')
+                newFav.src='./images/fav.png'
+                newFav.alt='favo'
+                newFav.dataset.type = 'favorite'
+
+                //check localstorage for key [restid]-[revid]
+                newFav.dataset.code = restaurant.id+'-'+i
+                console.log(localStorage.getItem(restaurant.id+'-'+i))
+                if(localStorage.getItem(restaurant.id+'-'+i) === '1'){
+                    //if key = 1 -> set .favOn + set dataset to fav = true
+                    newFav.className = 'favOn'
+                    newFav.dataset.fav = 'true'
+                }else {
+                    newFav.dataset.fav = 'false'
+                    newFav.className = 'favOff'
+                }
+
+
+
+                newDiv.dataset.restaurant = restaurant.id
+                newDiv.className = 'reviewcard'
                 newDiv.dataset.indexNumber = i;
                 newDiv.innerHTML =
                     "<h3 name='Score'>" + "Score: " +
                     reviews[i].score +
                     "</h3>" +
                     "<p>" + reviews[i].summary + "</p>" +
-                    "Geschreven door: " + reviews[i].reviewer + "<hr>"
+                    "Geschreven door: " + reviews[i].reviewer
+                newDiv.appendChild(newFav)
                 RestaurantDiv.appendChild(newDiv)
             }
             container.appendChild(RestaurantDiv)
@@ -109,4 +149,46 @@ function postReview(e) {
     xhttp.send(data)
     console.log('SUBIMITTEDs')
     location.replace('./review.html')
+}
+
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+function clickHandler(e){
+    console.log(e.target)
+    if (e.target === modal){
+        modal.style.display = "none";
+    }else if(e.target.className === 'restname'){
+        //Show restaurant data
+        modal.style.display = "block";
+        let restdata = SavedjsonData.restaurants[e.target.dataset.restid]
+        modalcontent.innerHTML = "<h3>" + restdata.Name +"</h3> <br> " +
+            "<p>Locatie: " + restdata.Location + "</p><br>" +
+            "<p>api ID: " +restdata.id+ "</p>"
+        console.log('EEE')
+    }else if(e.target.className === 'reviewcard'){
+        //show review + restaurant data
+        let revindex = e.target.dataset.indexNumber
+        let restdata = SavedjsonData.restaurants[e.target.dataset.restaurant]
+        modalcontent.innerHTML = "<h3>" + restdata.Name +"</h3> <br> " +
+            "<p>Locatie: " + restdata.Location + "</p><br>" +
+            "<p>api ID: " +restdata.id+ "</p> <br>" +
+            "<p>Score: "+restdata.Reviews[revindex].score+"</p><br>" +
+            "<p>"+restdata.Reviews[revindex].summary+"</p><br>" +
+            "<p>Door: "+restdata.Reviews[revindex].reviewer+"</p><br>"
+        modal.style.display = "block";
+    }else if(e.target.dataset.type === 'favorite'){
+        //togle favorite
+        let code = e.target.dataset.code
+        if(e.target.dataset.fav === 'false'){
+            e.target.dataset.fav = 'true';
+            localStorage.setItem(code, '1')
+            e.target.className = 'favOn'
+        }else if(e.target.dataset.fav === 'true') {
+            e.target.dataset.fav = 'false';
+            localStorage.setItem(code, '0')
+            e.target.className = 'favOff'
+        }
+    }
 }
